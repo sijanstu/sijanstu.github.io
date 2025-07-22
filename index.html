@@ -2,94 +2,613 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Sijan Bhandari – Java Spring Boot and Next.js developer building scalable backend systems and intuitive frontends. Based in Nepal." />
-  <meta name="keywords" content="Sijan Bhandari, Java Developer, Spring Boot, Next.js, Software Engineer Nepal, Full Stack Developer" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Enhanced SEO Meta Tags -->
+  <title>Sijan Bhandari - Full Stack Developer | Java Spring Boot Expert</title>
+  <meta name="description" content="Sijan Bhandari is a skilled Full Stack Developer specializing in Java Spring Boot backend development and Next.js frontend solutions. Expert in PostgreSQL, Redis, GCP, and modern web technologies. Available for freelance and full-time opportunities." />
+  <meta name="keywords" content="Sijan Bhandari, Full Stack Developer, Java Developer, Spring Boot, Next.js, React, TypeScript, PostgreSQL, Redis, GCP, Azure, Nepal Developer, Software Engineer, Backend Developer, Frontend Developer" />
   <meta name="author" content="Sijan Bhandari" />
-  <meta property="og:title" content="Sijan Bhandari | Full Stack Developer" />
-  <meta property="og:description" content="Java Spring Boot and Next.js developer with expertise in PostgreSQL, Redis, and cloud services like GCP and Azure." />
-  <meta property="og:image" content="/assets/images/pic.png" />
+  <meta name="robots" content="index, follow" />
+  <meta name="language" content="English" />
+  <meta name="geo.region" content="NP" />
+  <meta name="geo.country" content="Nepal" />
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Sijan Bhandari - Full Stack Developer | Java & Next.js Expert" />
+  <meta property="og:description" content="Expert Full Stack Developer specializing in scalable backend systems with Java Spring Boot and modern frontends with Next.js. Based in Nepal." />
+  <meta property="og:image" content="https://sijanstu.me/assets/images/pic.png" />
   <meta property="og:url" content="https://sijanstu.me" />
+  <meta property="og:site_name" content="Sijan Bhandari Portfolio" />
+  
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <title>Sijan Bhandari | Full Stack Developer</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <meta name="twitter:creator" content="@sijanbhandari1" />
+  <meta name="twitter:title" content="Sijan Bhandari - Full Stack Developer" />
+  <meta name="twitter:description" content="Expert Full Stack Developer specializing in Java Spring Boot and Next.js" />
+  <meta name="twitter:image" content="https://sijanstu.me/assets/images/pic.png" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  
+  <!-- Preload critical resources -->
+  <link rel="preload" href="https://sijanstu.me/assets/images/pic.png" as="image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+  <!-- Modern font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://sijanstu.me" />
+  
+  <!-- Schema.org structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Sijan Bhandari",
+    "jobTitle": "Full Stack Developer",
+    "description": "Expert Full Stack Developer specializing in Java Spring Boot and Next.js",
+    "url": "https://sijanstu.me",
+    "image": "https://sijanstu.me/assets/images/pic.png",
+    "email": "bhandarisijanstu@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "Nepal"
+    },
+    "sameAs": [
+      "https://github.com/sijanstu",
+      "https://twitter.com/sijanbhandari1",
+      "https://www.facebook.com/Sijanstu",
+      "https://dribbble.com/sijan9880"
+    ],
+    "knowsAbout": [
+      "Java", "Spring Boot", "Next.js", "React", "TypeScript", 
+      "PostgreSQL", "Redis", "Google Cloud Platform", "Azure"
+    ]
+  }
+  </script>
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    :root {
+      --primary: #6366f1;
+      --primary-dark: #4f46e5;
+      --secondary: #f59e0b;
+      --accent: #ec4899;
+      --text-primary: #0f172a;
+      --text-secondary: #64748b;
+      --bg-primary: #ffffff;
+      --bg-secondary: #f8fafc;
+      --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      --shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+      --shadow-lg: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+      --border-radius: 1rem;
+    }
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      line-height: 1.6;
+      color: var(--text-primary);
+      background: var(--bg-secondary);
+      overflow-x: hidden;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    
+    /* Hero Section */
+    .hero {
+      min-height: 100vh;
+      background: var(--bg-gradient);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="1" fill="rgba(255,255,255,0.1)"/></svg>');
+      animation: float 20s linear infinite;
+    }
+    
+    @keyframes float {
+      0% { transform: translateY(100vh) rotate(0deg); }
+      100% { transform: translateY(-100vh) rotate(360deg); }
+    }
+    
+    .hero-content {
+      text-align: center;
+      color: white;
+      z-index: 1;
+      position: relative;
+      animation: fadeInUp 1s ease-out;
+    }
+    
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .profile-image {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 4px solid rgba(255, 255, 255, 0.2);
+      box-shadow: var(--shadow-lg);
+      margin: 0 auto 2rem;
+      transition: all 0.3s ease;
+      animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4); }
+      70% { box-shadow: 0 0 0 10px rgba(255, 255, 255, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
+    }
+    
+    .profile-image:hover {
+      transform: scale(1.05);
+    }
+    
+    .hero h1 {
+      font-size: clamp(3rem, 8vw, 5rem);
+      font-weight: 800;
+      margin-bottom: 1rem;
+      background: linear-gradient(45deg, #fff, #f0f9ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .hero p {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+      opacity: 0.9;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .cta-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    
+    .btn {
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: var(--border-radius);
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .btn-primary {
+      background: rgba(255, 255, 255, 0.2);
+      color: white;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    
+    .btn-secondary {
+      background: white;
+      color: var(--primary);
+      box-shadow: var(--shadow);
+    }
+    
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+    }
+    
+    /* Skills Section */
+    .skills {
+      padding: 5rem 0;
+      background: var(--bg-primary);
+    }
+    
+    .section-title {
+      text-align: center;
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 3rem;
+      color: var(--text-primary);
+    }
+    
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    
+    .skill-card {
+      background: white;
+      padding: 2rem;
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow);
+      transition: all 0.3s ease;
+      border: 1px solid rgba(99, 102, 241, 0.1);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .skill-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: var(--bg-gradient);
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+    }
+    
+    .skill-card:hover::before {
+      transform: translateX(0);
+    }
+    
+    .skill-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--primary);
+    }
+    
+    .skill-card h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .skill-icon {
+      width: 2rem;
+      height: 2rem;
+      background: var(--bg-gradient);
+      border-radius: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+    }
+    
+    .skill-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    
+    .skill-item {
+      padding: 0.75rem 1rem;
+      background: var(--bg-secondary);
+      border-radius: 0.75rem;
+      color: var(--text-secondary);
+      font-weight: 500;
+      transition: all 0.3s ease;
+      border-left: 3px solid transparent;
+    }
+    
+    .skill-item:hover {
+      background: var(--primary);
+      color: white;
+      transform: translateX(5px);
+      border-left-color: white;
+    }
+    
+    /* Social Links */
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    
+    .social-link {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      text-decoration: none;
+      border-radius: 2rem;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: all 0.3s ease;
+    }
+    
+    .social-link:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: translateY(-2px);
+    }
+    
+    /* Footer */
+    .footer {
+      background: var(--text-primary);
+      color: white;
+      text-align: center;
+      padding: 2rem 0;
+    }
+    
+    /* Animations */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease;
+    }
+    
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 1rem;
+      }
+      
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+      
+      .hero p {
+        font-size: 1.1rem;
+      }
+      
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .btn {
+        min-width: 200px;
+      }
+    }
+    
+    /* Scroll indicator */
+    .scroll-indicator {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      animation: bounce 2s infinite;
+      color: white;
+      opacity: 0.7;
+    }
+    
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+      40% { transform: translateX(-50%) translateY(-10px); }
+      60% { transform: translateX(-50%) translateY(-5px); }
+    }
+  </style>
 </head>
-<body class="bg-gray-50 text-gray-900 font-sans min-h-screen flex flex-col items-center p-6">
-
-  <header class="flex flex-col items-center mb-10">
-    <img
-      src="https://sijanstu.me/assets/images/pic.png"
-      alt="Portrait of Sijan Bhandari"
-      class="w-32 h-32 rounded-full shadow-lg border-4 border-gray-300 mb-4"
-      loading="lazy"
-    />
-    <h1 class="text-4xl font-bold mb-1">Sijan Bhandari</h1>
-    <p class="text-lg text-center max-w-xl">
-      Full Stack developer focused on Java Spring Boot backend and Next.js frontend. I build scalable, maintainable systems with clean architecture and modern UI.
-    </p>
-    <ul class="flex space-x-6 mt-4 text-gray-600">
-      <li><a href="mailto:bhandarisijanstu@gmail.com" class="hover:text-blue-600"><i class="fa fa-envelope"></i> Email</a></li>
-      <li><a href="https://github.com/sijanstu" target="_blank" class="hover:text-gray-800"><i class="fa fa-github"></i> GitHub</a></li>
-      <li><a href="https://www.facebook.com/Sijanstu" target="_blank" class="hover:text-blue-700"><i class="fa fa-facebook"></i> Facebook</a></li>
-      <li><a href="https://twitter.com/sijanbhandari1" target="_blank" class="hover:text-blue-400"><i class="fa fa-twitter"></i> Twitter</a></li>
-      <li><a href="https://dribbble.com/sijan9880" target="_blank" class="hover:text-pink-500"><i class="fa fa-dribbble"></i> Dribbble</a></li>
-    </ul>
-  </header>
-
-  <section class="w-full max-w-5xl grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-    <div class="bg-white p-6 rounded-lg shadow-md">
-      <h2 class="text-2xl font-semibold mb-4 border-b border-gray-200 pb-2">Frontend</h2>
-      <ul class="space-y-2 text-gray-700">
-        <li>Next.js</li>
-        <li>React</li>
-        <li>Tailwind CSS</li>
-        <li>TypeScript</li>
-      </ul>
+<body>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <img
+          src="https://sijanstu.me/assets/images/pic.png"
+          alt="Sijan Bhandari - Full Stack Developer"
+          class="profile-image"
+          loading="eager"
+          width="150"
+          height="150"
+        />
+        <h1>Sijan Bhandari</h1>
+        <p>
+          Full Stack Developer crafting scalable backend systems with Java Spring Boot 
+          and building intuitive, modern frontends with Next.js and React.
+        </p>
+        <div class="cta-buttons">
+          <a href="#skills" class="btn btn-primary">View My Skills</a>
+          <a href="mailto:bhandarisijanstu@gmail.com" class="btn btn-secondary">Get In Touch</a>
+        </div>
+        <div class="social-links" style="margin-top: 2rem;">
+          <a href="mailto:bhandarisijanstu@gmail.com" class="social-link">
+            📧 Email
+          </a>
+          <a href="https://github.com/sijanstu" target="_blank" rel="noopener" class="social-link">
+            🐙 GitHub
+          </a>
+          <a href="https://www.facebook.com/Sijanstu" target="_blank" rel="noopener" class="social-link">
+            📘 Facebook
+          </a>
+          <a href="https://twitter.com/sijanbhandari1" target="_blank" rel="noopener" class="social-link">
+            🐦 Twitter
+          </a>
+          <a href="https://dribbble.com/sijan9880" target="_blank" rel="noopener" class="social-link">
+            🏀 Dribbble
+          </a>
+        </div>
+      </div>
     </div>
-    <div class="bg-white p-6 rounded-lg shadow-md">
-      <h2 class="text-2xl font-semibold mb-4 border-b border-gray-200 pb-2">Backend</h2>
-      <ul class="space-y-2 text-gray-700">
-        <li>Java</li>
-        <li>Spring Boot</li>
-        <li>REST APIs</li>
-        <li>JWT Authentication</li>
-      </ul>
-    </div>
-    <div class="bg-white p-6 rounded-lg shadow-md">
-      <h2 class="text-2xl font-semibold mb-4 border-b border-gray-200 pb-2">Databases</h2>
-      <ul class="space-y-2 text-gray-700">
-        <li>PostgreSQL</li>
-        <li>MySQL</li>
-        <li>MongoDB</li>
-        <li>Redis</li>
-      </ul>
-    </div>
-    <div class="bg-white p-6 rounded-lg shadow-md">
-      <h2 class="text-2xl font-semibold mb-4 border-b border-gray-200 pb-2">DevOps</h2>
-      <ul class="space-y-2 text-gray-700">
-        <li>Docker</li>
-        <li>CI/CD</li>
-        <li>Nginx</li>
-        <li>Linux</li>
-      </ul>
-    </div>
-    <div class="bg-white p-6 rounded-lg shadow-md">
-      <h2 class="text-2xl font-semibold mb-4 border-b border-gray-200 pb-2">Cloud & Tools</h2>
-      <ul class="space-y-2 text-gray-700">
-        <li>Google Cloud Platform (GCP)</li>
-        <li>Azure</li>
-        <li>Firebase</li>
-        <li>GitHub</li>
-        <li>Postman</li>
-      </ul>
+    <div class="scroll-indicator">
+      <div style="font-size: 1.5rem;">↓</div>
+      <div style="font-size: 0.9rem;">Scroll to explore</div>
     </div>
   </section>
 
-  <footer class="text-center text-gray-600 text-sm mb-6">
-    <p>© 2025 Sijan Bhandari. All rights reserved.</p>
+  <!-- Skills Section -->
+  <section id="skills" class="skills">
+    <div class="container">
+      <h2 class="section-title fade-in">Technical Expertise</h2>
+      <div class="skills-grid">
+        <article class="skill-card fade-in">
+          <h3>
+            <div class="skill-icon">🎨</div>
+            Frontend Development
+          </h3>
+          <ul class="skill-list">
+            <li class="skill-item">Next.js - React Framework</li>
+            <li class="skill-item">React - Component Library</li>
+            <li class="skill-item">TypeScript - Type Safety</li>
+            <li class="skill-item">Tailwind CSS - Utility-First</li>
+          </ul>
+        </article>
+
+        <article class="skill-card fade-in">
+          <h3>
+            <div class="skill-icon">⚙️</div>
+            Backend Development
+          </h3>
+          <ul class="skill-list">
+            <li class="skill-item">Java - Core Programming</li>
+            <li class="skill-item">Spring Boot - Enterprise Framework</li>
+            <li class="skill-item">REST APIs - Web Services</li>
+            <li class="skill-item">JWT Authentication - Security</li>
+          </ul>
+        </article>
+
+        <article class="skill-card fade-in">
+          <h3>
+            <div class="skill-icon">🗄️</div>
+            Database Systems
+          </h3>
+          <ul class="skill-list">
+            <li class="skill-item">PostgreSQL - Relational DB</li>
+            <li class="skill-item">MySQL - Popular RDBMS</li>
+            <li class="skill-item">MongoDB - NoSQL Document DB</li>
+            <li class="skill-item">Redis - In-Memory Cache</li>
+          </ul>
+        </article>
+
+        <article class="skill-card fade-in">
+          <h3>
+            <div class="skill-icon">🚀</div>
+            DevOps & Deployment
+          </h3>
+          <ul class="skill-list">
+            <li class="skill-item">Docker - Containerization</li>
+            <li class="skill-item">CI/CD - Automation Pipelines</li>
+            <li class="skill-item">Nginx - Web Server</li>
+            <li class="skill-item">Linux - Server Administration</li>
+          </ul>
+        </article>
+
+        <article class="skill-card fade-in">
+          <h3>
+            <div class="skill-icon">☁️</div>
+            Cloud & Tools
+          </h3>
+          <ul class="skill-list">
+            <li class="skill-item">Google Cloud Platform (GCP)</li>
+            <li class="skill-item">Microsoft Azure</li>
+            <li class="skill-item">Firebase - BaaS Platform</li>
+            <li class="skill-item">GitHub - Version Control</li>
+          </ul>
+        </article>
+
+        <article class="skill-card fade-in">
+          <h3>
+            <div class="skill-icon">🛠️</div>
+            Development Tools
+          </h3>
+          <ul class="skill-list">
+            <li class="skill-item">Postman - API Testing</li>
+            <li class="skill-item">Git - Version Control</li>
+            <li class="skill-item">VS Code - IDE</li>
+            <li class="skill-item">IntelliJ IDEA - Java IDE</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Sijan Bhandari. All rights reserved.</p>
+      <p style="margin-top: 0.5rem; opacity: 0.7; font-size: 0.9rem;">
+        Full Stack Developer | Java Spring Boot & Next.js Specialist | Available for Projects
+      </p>
+    </div>
   </footer>
 
-  <!-- Font Awesome CDN for icons -->
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script>
+    // Intersection Observer for fade-in animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions);
+
+    // Observe all fade-in elements
+    document.addEventListener('DOMContentLoaded', () => {
+      const fadeElements = document.querySelectorAll('.fade-in');
+      fadeElements.forEach(el => observer.observe(el));
+      
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        });
+      });
+    });
+
+    // Performance optimization - lazy load images
+    if ('loading' in HTMLImageElement.prototype) {
+      const images = document.querySelectorAll('img[data-src]');
+      images.forEach(img => {
+        img.src = img.dataset.src;
+      });
+    }
+  </script>
 </body>
 </html>
